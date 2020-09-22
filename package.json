@@ -1,0 +1,23 @@
+{
+  "name": "cours2node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jurix99/-ING4_SI_Gr04_TERRIER_Julien.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jurix99/-ING4_SI_Gr04_TERRIER_Julien/issues"
+  },
+  "homepage": "https://github.com/jurix99/-ING4_SI_Gr04_TERRIER_Julien#readme"
+}
