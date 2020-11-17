@@ -42,6 +42,12 @@ Ce tp a pour but d'approfondir nos connaissances sur react en créant le front e
     moment().format()
     moment().calendar()
 ```
+ ### CSS
+Connaissances du css sur le long terme
+Problèmes à résoudre : 
+- Responsivité parfaite
+- Animations possibles
+- Changement de thème facilement
 
 ## Contributeurs
 Merci au professeur, monsieur FRYDMAN qui a donné ce cours et aux sites :
