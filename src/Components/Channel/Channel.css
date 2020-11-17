@@ -1,0 +1,29 @@
+
+
+.channel{
+    width:80%;
+    float: left;
+}
+.header{
+    position: relative;
+    display:flex;
+    background-color: black;
+    height:10vh;
+    justify-content: center;
+    align-items: center;
+}
+.channelName{
+    font-size: large;
+    font-weight: bold;
+    color: white;
+}
+.circular{
+    border-radius: 50%;
+    height:80%;
+    margin: 1%;
+  }
+
+p{
+    color:white;
+    font-weight: bold;
+}

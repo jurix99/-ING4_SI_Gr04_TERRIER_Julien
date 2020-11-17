@@ -1,0 +1,30 @@
+.container{
+    width:20%;
+    height: 100vh;
+    float: left;
+    flex: 0 0 25%;
+    background-color: rgb(36, 36, 36);
+
+}
+
+.channel{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.channel:hover{
+    cursor: pointer;
+}
+
+.channel .name{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.channel p{
+    color: gray;
+    margin: 0;
+    font-weight: lighter;
+    min-width: 0;
+}

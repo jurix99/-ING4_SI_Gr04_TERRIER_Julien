@@ -1,17 +1,153 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Channels from './Components/Channels/Channels.js';
+import Channel from './Components/Channel/Channel.js';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export default class App extends React.Component {
+    constructor(props) {
+        super(props);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+        this.state = {
+            channels : [{
+                name: 'Ece Paris promo 2022',
+              
+                messages : [{
+                
+                    author: 'sergei',
+                    creation: 1602831101929,
+                    content: `
+                    Bonjour
+                    `,
+                },{
+                    author: 'david',
+                    creation: 1602832138892,
+                    content: `Bonjour
+                    `,
+                },{
+                    author: 'sergei',
+                    creation: 1602840139202,
+                    content: `
+                    ca va ?
+                    `,
+                },{
+                    author: 'david',
+                    creation: 1602844139200,
+                    content: `
+                   oui et toi ?
+                    `,
+                },{
+                    author: 'david',
+                    creation: 1602844139200,
+                    content: `
+                   oui et toi ?
+                    `,
+                }]
+            },
+            {
+                name: 'Fake channel',
+                          
+                            messages : [{
+                            
+                                author: 'sergei',
+                                creation: 1602831101929,
+                                content: `
+                                ## 1 - Architecture - Level easy
+                                
+                                It is now the right time to re-organize/refactor our code. Split this
+                                monolithic react Component into multiple section. In the end, we should end
+                                up with the following components: 'Header', 'Footer', 'Main', 'Channels',
+                                'Channel', 'Messages', 'MessageSend':
+                                
+                                - 'App.js' file uses 'Header.js', 'Main.js', 'Footer.js'
+                                - 'Main.js' file uses 'Channels.js', 'Channel.js'
+                                - 'Channels.js' prints the list of channels
+                                - 'Channel.js' prints the messages, uses 'Messages.js' and 'MessageSend.js'
+                                - 'Messages.js' prints the list of messages inside the current channel
+                                - 'MessageForm.js' send a new message
+                                
+                                \`\`\`
+                                +--------------------------------------------+
+                                |                  Header                    |
+                                +--------------------------------------------+
+                                |   Channels    |          Channel           |
+                                |               | +------------------------+ |
+                                |               | |        Messages        | |
+                                |               | +------------------------+ |
+                                |               | |      MessageSend       | |
+                                |               | +------------------------+ |
+                                +--------------------------------------------+
+                                |                  Footer                    |
+                                +--------------------------------------------+
+                                \`\`\`
+                                `,
+                            },{
+                                author: 'david',
+                                creation: 1602832138892,
+                                content: `
+                                ## 2 - Styles - Level easy
+                                
+                                Give it some styles, use CSS to make it looks good. Possible source of
+                                improvements include changing the colors, replacing the HTML "send" button
+                                with an icon, working on the header, providing day/night themes ... be creative
+                                `,
+                            },{
+                                author: 'sergei',
+                                creation: 1602840139202,
+                                content: `
+                                ## 3 - Use an external library - Level medium
+                                
+                                Format the date in a human readable format. While the date is generated on
+                                the server side to ensure its relevance and prevent from forgery, it must be
+                                displayed according to the user browser local. The
+                                [Moment.js](https://momentjs.com/) library has been the library of choice
+                                for many years to accomplish date formatting. Read what is displayed on the
+                                top right corner of their homepage, it is now depreciated. Read the reasons
+                                and act accordingly.
+                                `,
+                            },{
+                                author: 'david',
+                                creation: 1602844139200,
+                                content: `
+                                ## 4 - Support message contents in Markdown - Level hard
+                                
+                                Markdown is the most popular syntax to format text into HTML. It is used
+                                by the majority of the project Readme files, to write documentation and to
+                                generate websites.
+                                
+                                I recommand you to use the [unified](https://unifiedjs.com/) which is very
+                                powerful and comes with a lot of plugins. You can read the Markdown to HTML
+                                guide in the learn section and enrich it with your selection of relevant
+                                plugins.
+                                
+                                Consider adding syntax highlight support with a library like
+                                [Prism](https://prismjs.com/).
+                                `,
+                                }
+                        ],
+                    }
+            ],
+            currentchannel : 0,
+        };
+      }
+
+      handleClick(i) {
+        this.setState({ currentchannel : i })
+      }
+
+      render() {
+          alert(this.state.channels[this.state.currentchannel].messages.length);
+
+        return (
+        <div>
+            <Channels channels={this.state.channels} onClick={i => this.handleClick(i)}/>
+            <Channel channel={this.state.channels[this.state.currentchannel]}/>
+        </div>
+        ); 
+      }
+    }
+
+
+
+const element = <App/>;
+ReactDOM.render(element, document.getElementById('root'));

@@ -1,0 +1,109 @@
+.box{
+
+  flex: 3;
+  height: 5vh;
+}
+.message{
+  width:100%;
+  text-align: center;
+  clear:both;
+}
+
+.bulle
+{
+    float: left;
+    clear:both;
+    max-width: 70%;
+}
+.maBulle
+{
+
+    float: right;
+    clear:both;
+    max-width: 70%;
+}
+.maBulle .name{
+    text-align: right;
+}
+
+.message h5{
+  padding-left: 3vh;
+  margin:5px;
+  color: #bdbdbd;
+}
+.message h5{
+  padding-right: 3vh;
+  margin:5px;
+  color: #bdbdbd;
+}
+
+.bulle h6{
+    padding-left: 3vh;
+    margin:5px;
+    color: #bdbdbd;
+}
+.maBulle h6{
+    padding-right: 3vh;
+    margin:5px;
+    color: #bdbdbd;
+}
+
+.bulle p{
+  background-color: rgb(36, 36, 36);
+  box-decoration-break: clone;
+    padding: 0.5rem 1rem;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: white;
+    border-radius: 20px;
+    margin-block-start: 0;
+    margin-block-end: 2px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    left: 10px;
+}
+
+.maBulle p{
+    background-color: #0687ff;
+    box-decoration-break: clone;
+    padding: 0.5rem 1rem;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: white;
+    border-radius: 20px;
+    margin-block-start: 0;
+    margin-block-end: 2px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    right: 10px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(36, 36, 36);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(36, 36, 36);
+  }
+
+.listMsg{
+    position: relative;
+    height: 85vh;
+    background-color: black;
+    overflow: auto;
+}
+
