@@ -1,23 +1,31 @@
+# TP6 JWT
 
-# ECE WebTech Chat
+Ce tp a pour but de creer un token à la connexion de l'utilisateur, pour lui permettre de rester connecter et de s'identifier pour une certaine durée.
 
-This is a chat application we wrote to learn the basics and the not so basics features of backend and frontend web programing. It leverages Node.js and React as well as complementary technologies such as unit testing with Mocha and Should.js, embeded storage with LevelDB, REST APIs, ... If we have time, we'll also play with GraphQL and Socket.io
+## installation
+```js
 
-## Usage
+    var jwt = require('jsonwebtoken');
 
-Start the web application:
-
-```bash
-./bin/start 
-Chat is waiting for you at http://localhost:3000
 ```
+## Utile dans ce tp
 
-Run the tests with mocha:
+ ### JWT functions
+```js
 
-```bash
-npm run test
+    jwt.sign({user}, 'secretkey', { expiresIn: '30s' }, (err, token) => {}
+    jwt.verify(req.token, 'secretkey', (err, authData) => {}
+    const bearerHeader = req.headers['authorization'];
+
 ```
+ ### PostMan
+Vérification sur postman du bon fonctionnement du token.
+- Faire un post de login
+- Copier le token
+- L'ajouter dans le header authorization du chemin demandant une verification token
+- Voir l'affichage des infos de l'utilisateur si l'expiration n'est pas arrivée
 
-## Instructions
-
-See "../lab.md" for the lab instructions.
+## Contributeurs
+Merci au professeur, monsieur FRYDMAN qui a donné ce cours et aux sites :
+Sur campus : [pdf]
+[videos](https://www.youtube.com/watch?v=mbsmsi7l3r4)
